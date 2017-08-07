@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ToDoItem extends React.Component {
+class TodoItem extends React.Component {
   render() {
     let doRemove = () => {
       this.props.remove(this.props.todo.id);
@@ -15,4 +15,4 @@ class ToDoItem extends React.Component {
   }
 }
 
-export default ToDoItem;
+export default TodoItem;

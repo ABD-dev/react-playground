@@ -1,13 +1,15 @@
 import React from 'react';
 
-class AddToDo extends React.Component {;
+class AddTodo extends React.Component {;
   render() {
     let input;
 
     let doSubmit = (e) => {
       e.preventDefault();
-      this.props.addTodo(input.value);
-      input.value = '';
+      if (input.value) {
+        this.props.addTodo(input.value);
+        input.value = '';
+      }
     }
 
     return (
@@ -23,4 +25,4 @@ class AddToDo extends React.Component {;
   }
 }
 
-export default AddToDo;
+export default AddTodo;
